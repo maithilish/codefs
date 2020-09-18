@@ -37,7 +37,7 @@
         "overwrite": true,
         "path": "/etc/NetworkManager/system-connections/enp1s0.nmconnection",
         "contents": {
-          "source": "data:,%5Bconnection%5D%0Atype%3Dethernet%0Aid%3Denp0s3%0Ainterface-name%3D%22Wired%20connection%201%22%0A%0A%5Bipv4%5D%0Amethod%3Dmanual%0Aaddresses%3D192.168.99.100%2F24%0Agateway%3D192.168.99.1%0Adns%3D192.168.99.1%3B8.8.8.8%0A"
+          "source": "data:,%5Bconnection%5D%0Atype%3Dethernet%0Aid%3D%22Wired%20connection%201%22%0Ainterface-name%3Denp0s3%0A%0A%5Bipv4%5D%0Amethod%3Dmanual%0Aaddresses%3D192.168.99.100%2F24%0Agateway%3D192.168.99.1%0Adns%3D192.168.99.1%3B8.8.8.8%0A"
         },
         "mode": 384
       }
