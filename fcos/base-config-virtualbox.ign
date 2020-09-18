@@ -1,0 +1,46 @@
+{
+  "ignition": {
+    "version": "3.1.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "groups": [
+          "docker",
+          "wheel",
+          "sudo"
+        ],
+        "name": "k",
+        "passwordHash": "<replace-this>",
+        "sshAuthorizedKeys": [
+          "<replace-this>"
+        ]
+      }
+    ]
+  },
+  "storage": {
+    "files": [
+      {
+        "path": "/etc/sysctl.d/20-silence-audit.conf",
+        "contents": {
+          "source": "data:,kernel.printk%3D4%0A"
+        }
+      },
+      {
+        "path": "/etc/hostname",
+        "contents": {
+          "source": "data:,fcos"
+        },
+        "mode": 420
+      },
+      {
+        "overwrite": true,
+        "path": "/etc/NetworkManager/system-connections/enp1s0.nmconnection",
+        "contents": {
+          "source": "data:,%5Bconnection%5D%0Atype%3Dethernet%0Aid%3Denp0s3%0Ainterface-name%3D%22Wired%20connection%201%22%0A%0A%5Bipv4%5D%0Amethod%3Dmanual%0Aaddresses%3D192.168.99.100%2F24%0Agateway%3D192.168.99.1%0Adns%3D192.168.99.1%3B8.8.8.8%0A"
+        },
+        "mode": 384
+      }
+    ]
+  }
+}
